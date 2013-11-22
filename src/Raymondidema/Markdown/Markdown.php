@@ -30,7 +30,10 @@ class Markdown
 	public function __construct()
 	{
 		$this->location = Config::get('markdown::location');
-		$this->markdownParser = new $this->parser;
+		if($this->parser == 'MarkdownExtraParser')
+			$this->markdownParser = new MarkdownExtraParser;
+		else
+			$this->markdownParser = new MarkdownParser;
 	}
 	/**
 	 * Parser setter
