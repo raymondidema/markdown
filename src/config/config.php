@@ -7,9 +7,4 @@ return array(
 	 */
 	'location' => app_path().'/views/markdown',
 
-	/**
-	 * Parser
-	 */
-	'parser' => 'MarkdownExtraParser',
-
 );

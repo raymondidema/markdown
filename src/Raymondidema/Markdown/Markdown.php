@@ -20,13 +20,25 @@ class Markdown
 	protected $markdownParser;
 
 	/**
+	 * Get default parser
+	 * @var [type]
+	 */
+	protected $parser = 'MarkdownExtraParser';
+	/**
 	 * Constructs the location and markdown
 	 */
 	public function __construct()
 	{
 		$this->location = Config::get('markdown::location');
-		$parser = Config::get('markdown::parser');
-		$this->markdownParser = new $parser;
+		$this->markdownParser = new $this->parser;
+	}
+	/**
+	 * Parser setter
+	 * @param string $parser Markdown parser setter
+	 */
+	public function setParser($parser)
+	{
+		$this->parser = $parser;
 	}
 
 	/**
