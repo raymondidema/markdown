@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Config;
 use dflydev\markdown\MarkdownParser as MarkdownParser;
+use dflydev\markdown\MarkdownExtraParser as MarkdownExtraParser;
 
 class Markdown
 {
