@@ -24,7 +24,8 @@ class Markdown
 	public function __construct()
 	{
 		$this->location = Config::get('markdown::location');
-		$this->markdownParser = new MarkdownParser;
+		$parser = Config::get('markdown::parser');
+		$this->markdownParser = new $parser;
 	}
 
 	/**
